@@ -28,3 +28,30 @@ jobs:
         cache: 'npm'
     - run: npm i
     - run: npm run build --if-present
+    - name: Package File
+      run: tar -a -c -f Release.zip build/*
+    - name: Create draft release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+      with:
+        tag_name: ${{ github.ref }}
+        release_name: Release ${{ github.ref }}
+        body: |
+          My comment
+          On this release
+          before exiting
+          draft
+        draft: true
+        prerelease: false
+    - name: Upload Release File
+      id: Windows-Asset
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./Release.zip
+        asset_name: Release.zip
+        asset_content_type: application/zip
