@@ -1,6 +1,16 @@
 import React from "react"
 import { Chrono } from "react-chrono";
 
+/*
+Image Import
+*/
+import ChinaWar from './img/20080310-Korean war, anti American 2.jpg'
+import SurpriseAttack from './img/Battle_of_Inchon.png'
+import SouthPushBack from './img/450px-Central_Korea_during_Communist_Spring_Offensive_1951.jpg'
+import MacArthurRemoved from './img/macarthur-truman-gettyimages-514866108.jpg'
+import UNRetake from './img/map2.gif'
+import Ceasefire from './img/3HHL4MIWTCMHSGVWATS5T3KLBE.jpg'
+import SEATO from './img/SEATO-nations-leaders-portrait-Manila-Conference-1966.jpg'
 const items = [
   {
     title: "Sources",
@@ -94,7 +104,7 @@ const items = [
   media: {
     type: "IMAGE",
     source: {
-      url: "http://someurl/image.jpg"
+      url: ChinaWar
     }
   }
 },
@@ -107,7 +117,7 @@ const items = [
   media: {
     type: "IMAGE",
     source: {
-      url: "http://someurl/image.jpg"
+      url: SurpriseAttack
     }
   }
 },
@@ -120,7 +130,7 @@ const items = [
   media: {
     type: "IMAGE",
     source: {
-      url: "http://someurl/image.jpg"
+      url: SouthPushBack
     }
   }
 },
@@ -133,7 +143,7 @@ const items = [
   media: {
     type: "IMAGE",
     source: {
-      url: "http://someurl/image.jpg"
+      url: MacArthurRemoved
     }
   }
 },
@@ -146,7 +156,7 @@ const items = [
   media: {
     type: "IMAGE",
     source: {
-      url: "http://someurl/image.jpg"
+      url: UNRetake
     }
   }
 },
@@ -159,7 +169,7 @@ const items = [
   media: {
     type: "IMAGE",
     source: {
-      url: "http://someurl/image.jpg"
+      url: Ceasefire
     }
   }
 },
@@ -172,7 +182,7 @@ const items = [
   media: {
     type: "IMAGE",
     source: {
-      url: "http://someurl/image.jpg"
+      url: SEATO
     }
   }
 },
